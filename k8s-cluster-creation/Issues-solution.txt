@@ -1,0 +1,9 @@
+1. Some how if you get error to start docker service due to mask issue , unable to start docker as it is masked. Try below commands:
+
+    sudo systemctl unmask docker.service
+    sudo systemctl unmask docker.socket
+    sudo systemctl start docker.service
+
+2. If you kubelet is not getting started and asking to swap off , try below command:
+ 
+    sudo swapoff -a
